@@ -1,0 +1,70 @@
+baseURL = 'https://vijayjt.github.io/'
+title = "Vijay Thakorlal's Blog"
+theme = "coder"
+
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+
+contentDir = "content"
+
+enableEmoji = true
+
+
+[markup.highlight]
+style = "github-dark"
+
+[params]
+  author = "Vijay Thakorlal"
+  info = "Technologist"
+  description = "Vijay Thakorlal's Tech Blog"
+  keywords = "blog,developer,personal"
+  #avatarurl = "images/avatar.jpg"
+  #gravatar = "john.doe@example.com"
+
+  #faviconSVG = "/img/favicon.svg"
+  #favicon_32 = "/img/favicon-32x32.png"
+  #favicon_16 = "/img/favicon-16x16.png"
+
+  since = 2024
+  dateFormat = "January 2, 2006"
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  customCSS = []
+  customSCSS = []
+  customJS = []
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/vijayjt/"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa fa-2x fa-linkedin"
+weight = 4
+url = "https://www.linkedin.com/in/Vijay-thakorlal-73a9a02/"
+
+# Menu links
+[[menu.main]]
+  name = "Blog"
+  weight = 1
+  url  = "posts/"
+[[menu.main]]
+  name = "About"
+  weight = 2
+  url = "about/"
+
