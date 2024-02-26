@@ -11,12 +11,12 @@ fzf is a command-line fuzzy finder, as the project site states it is an interact
 <time datetime=2024-01-05T19:05:53Z>January 5, 2024
 </time></span><span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
 2-minute read</span></div><div class=categories><i class="fa fa-folder" aria-hidden=true></i>
-<a href=/categories/tips/>tips</a></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
+<a href=/categories/tips/>Tips</a></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
 <span class=tag><a href=/tags/azure/>Azure</a>
 </span><span class=separator>•</span>
 <span class=tag><a href=/tags/aad-login/>AAD Login</a>
 </span><span class=separator>•</span>
-<span class=tag><a href=/tags/fzf/>fzf</a></span></div></div></header><div class=post-content><p><a href=https://learn.microsoft.com/en-us/entra/identity/devices/howto-vm-sign-in-azure-ad-linux class=external-link target=_blank rel=noopener>AAD Login</a> or EntraID login now, is a feature that allows you to login to Azure VMs
+<span class=tag><a href=/tags/fzf/>Fzf</a></span></div></div></header><div class=post-content><p><a href=https://learn.microsoft.com/en-us/entra/identity/devices/howto-vm-sign-in-azure-ad-linux class=external-link target=_blank rel=noopener>AAD Login</a> or EntraID login now, is a feature that allows you to login to Azure VMs
 using your Entra ID account.</p><p>It requires that you have the Virtual Machine Login or Virtual Machine Administrator Login roles (the former logs you in as a regular user and the latter an administrator).</p><p><a href=https://github.com/junegunn/fzf class=external-link target=_blank rel=noopener>fzf</a> is a command-line fuzzy finder, as the project site states it is an interactive UNIX filter for command-line that can be used with any list, files, etc.</p><p>Two example functions are provided below that use fzf to allow you to interactively select the subscription, VM/VMSS to SSH to.</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#ff7b72>function</span> az_ssh_vmss_instance<span style=color:#ff7b72;font-weight:700>(){</span>
 </span></span><span style=display:flex><span>   <span style=color:#79c0ff>AZ_SSH_CFG</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;</span><span style=color:#a5d6ff>${</span><span style=color:#79c0ff>HOME</span><span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>/.azure-sshconfig&#34;</span>
 </span></span><span style=display:flex><span>   <span style=color:#79c0ff>AZ_SSH_KEYS</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;</span><span style=color:#a5d6ff>${</span><span style=color:#79c0ff>HOME</span><span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>/.azure-sshkeys&#34;</span>

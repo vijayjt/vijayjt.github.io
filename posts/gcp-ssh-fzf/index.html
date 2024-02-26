@@ -11,15 +11,15 @@ The example function below (which can be added to your bash or zsh profile) can 
 <time datetime=2024-01-05T10:15:10Z>January 5, 2024
 </time></span><span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
 One-minute read</span></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
-<span class=tag><a href=/tags/gcloud/>gcloud</a>
+<span class=tag><a href=/tags/gcloud/>Gcloud</a>
 </span><span class=separator>•</span>
-<span class=tag><a href=/tags/ssh/>ssh</a>
+<span class=tag><a href=/tags/ssh/>Ssh</a>
 </span><span class=separator>•</span>
-<span class=tag><a href=/tags/iap/>iap</a>
+<span class=tag><a href=/tags/iap/>Iap</a>
 </span><span class=separator>•</span>
-<span class=tag><a href=/tags/fzf/>fzf</a>
+<span class=tag><a href=/tags/fzf/>Fzf</a>
 </span><span class=separator>•</span>
-<span class=tag><a href=/tags/cloud/>cloud</a></span></div></div></header><div class=post-content><p>The <code>gcloud compute ssh</code> <a href=https://cloud.google.com/sdk/gcloud/reference/compute/ssh class=external-link target=_blank rel=noopener>command</a> is a wrapper around SSH that is used to
+<span class=tag><a href=/tags/cloud/>Cloud</a></span></div></div></header><div class=post-content><p>The <code>gcloud compute ssh</code> <a href=https://cloud.google.com/sdk/gcloud/reference/compute/ssh class=external-link target=_blank rel=noopener>command</a> is a wrapper around SSH that is used to
 SSH to VMs in GCP.</p><p><a href=https://github.com/junegunn/fzf class=external-link target=_blank rel=noopener>fzf</a> is a command-line fuzzy finder, as the project site states it is an interactive UNIX filter for command-line that can be used with any list, files, etc.</p><p>The example function below (which can be added to your bash or zsh profile) can be used to interactively select the VM to login to using <code>gcloud compute ssh</code> or SCP a file to a instance.</p><div class=highlight><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#ff7b72>function</span> gcp_ssh<span style=color:#ff7b72;font-weight:700>(){</span>
 </span></span><span style=display:flex><span>    <span style=color:#79c0ff>proj_filter</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;</span><span style=color:#79c0ff>$1</span><span style=color:#a5d6ff>&#34;</span>
 </span></span><span style=display:flex><span>    <span style=color:#79c0ff>PROJECT</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#ff7b72>$(</span>gcloud projects list --format<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;value(projectId)&#34;</span> --filter<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;name~</span><span style=color:#79c0ff>$proj_filter</span><span style=color:#a5d6ff>&#34;</span> | fzf --tac<span style=color:#ff7b72>)</span>
